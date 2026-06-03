@@ -33,9 +33,6 @@ export default defineConfig({
   // Force-enable nitro with the Cloudflare Pages preset.
   nitro: {
     preset: "cloudflare-pages",
-    cloudflare: {
-      deployConfig: false,
-    },
   },
   vite: {
     server: {
