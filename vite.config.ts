@@ -24,6 +24,7 @@ function rewriteAssetUrls(): Plugin {
 }
 
 export default defineConfig({
+  plugins: [rewriteAssetUrls()],
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
@@ -37,7 +38,6 @@ export default defineConfig({
     },
   },
   vite: {
-    plugins: [rewriteAssetUrls()],
     server: {
       proxy: {
         // Dev only: forward /__l5e/ asset requests to the Lovable project CDN.
