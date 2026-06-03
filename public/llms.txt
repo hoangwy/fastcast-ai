@@ -1,0 +1,7 @@
+# Fastcast
+
+> Relevance Infrastructure for Podcast Discovery. Fastcast enables brands to exclusively own podcast discovery categories across cities, industries, sports, and topics.
+
+## Pages
+
+- [Home](/): Overview of Fastcast, proof, and how brands reserve a category.
