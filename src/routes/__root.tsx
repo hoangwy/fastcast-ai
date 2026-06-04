@@ -12,6 +12,10 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 
+const SITE_URL = "https://fastcast.ai";
+const OG_IMAGE_PATH = "/og-image.jpg";
+const OG_IMAGE_URL = `${SITE_URL}${OG_IMAGE_PATH}`;
+
 function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -83,11 +87,29 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:description", content: "Fastcast.ai enables brands to own podcast discovery categories, generating curiosity and credibility." },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Fastcast" },
-      { name: "twitter:card", content: "summary" },
+      { property: "og:url", content: SITE_URL },
+      { property: "og:image", content: OG_IMAGE_URL },
+      { property: "og:image:secure_url", content: OG_IMAGE_URL },
+      { property: "og:image:type", content: "image/png" },
+      { property: "og:image:width", content: "603" },
+      { property: "og:image:height", content: "650" },
+      { property: "og:image:alt", content: "Fastcast podcast discovery" },
+      { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Fastcast — Own Podcast Discovery" },
       { name: "twitter:description", content: "Fastcast.ai enables brands to own podcast discovery categories, generating curiosity and credibility." },
+      { name: "twitter:image", content: OG_IMAGE_URL },
+      { name: "twitter:image:alt", content: "Fastcast podcast discovery" },
     ],
     links: [
+      {
+        rel: "icon",
+        type: "image/svg+xml",
+        href: "/favicon.svg",
+      },
+      {
+        rel: "shortcut icon",
+        href: "/favicon.ico",
+      },
       {
         rel: "stylesheet",
         href: appCss,
@@ -100,7 +122,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@context": "https://schema.org",
           "@type": "Organization",
           name: "Fastcast",
-          url: "https://fastcast1.lovable.app",
+          url: SITE_URL,
           description: "Relevance Infrastructure for Podcast Discovery — exclusive ownership of podcast discovery categories.",
         }),
       },
@@ -110,7 +132,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@context": "https://schema.org",
           "@type": "WebSite",
           name: "Fastcast",
-          url: "https://fastcast1.lovable.app",
+          url: SITE_URL,
         }),
       },
     ],
