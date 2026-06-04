@@ -1,4 +1,4 @@
-import musicNewsImg from "@/assets/music-news.png.asset.json";
+import imagePickerImg from "@/assets/image_picker.jpg";
 
 export function Example() {
   return (
@@ -17,7 +17,7 @@ export function Example() {
           <div className="lg:col-span-6">
             <div className="aspect-square overflow-hidden rounded-2xl shadow-[0_40px_80px_-40px_oklch(0_0_0/0.35)]">
               <img
-                src={musicNewsImg.url}
+                src={imagePickerImg}
                 alt="The Daily News Now! Music News — Presented by UJ.fm"
                 className="h-full w-full object-cover"
                 loading="lazy"
