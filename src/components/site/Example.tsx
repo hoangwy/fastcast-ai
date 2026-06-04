@@ -29,9 +29,9 @@ export function Example() {
             <ul className="divide-y divide-border border-y border-border">
               {[
                 { title: "Music News Today.", partner: "— Presented by UJ.fm" },
-                { title: "AI News Today.", partner: "— Presented by Anthropic" },
-                { title: "NBA News Today.", partner: "— Presented by Smacktok" },
-                { title: "Real Estate News Today.", partner: "— Presented by Compass" },
+                { title: "AI News Today.", partner: "— Available" },
+                { title: "NBA News Today.", partner: "— Available" },
+                { title: "Real Estate News Today.", partner: "— Available" },
               ].map((row) => (
                 <li key={row.title} className="flex items-baseline justify-between gap-6 py-6">
                   <p className="font-display text-2xl md:text-3xl leading-[1.05] tracking-[-0.02em]">
