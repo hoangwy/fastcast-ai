@@ -8,6 +8,7 @@ import { Example } from "@/components/site/Example";
 import { Vision } from "@/components/site/Vision";
 import { CTA } from "@/components/site/CTA";
 import { Footer } from "@/components/site/Footer";
+import { AuthGate } from "@/components/site/AuthGate";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -41,18 +42,20 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <div className="min-h-screen bg-background text-foreground antialiased">
-      <Nav />
-      <main>
-        <Hero />
-        <Proof />
-        <Statement />
-        <Example />
-        
-        <Vision />
-        <CTA />
-      </main>
-      <Footer />
-    </div>
+    <AuthGate>
+      <div className="min-h-screen bg-background text-foreground antialiased">
+        <Nav />
+        <main>
+          <Hero />
+          <Proof />
+          <Statement />
+          <Example />
+
+          <Vision />
+          <CTA />
+        </main>
+        <Footer />
+      </div>
+    </AuthGate>
   );
 }
