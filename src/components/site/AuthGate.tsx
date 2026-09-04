@@ -52,7 +52,7 @@ export function AuthGate({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4 py-12">
-      <div className="flex w-full max-w-md flex-col items-center gap-5">
+      <div className="flex w-full max-w-md flex-col items-center gap-8">
         <div className="w-full rounded-2xl border border-border/70 bg-card p-8 shadow-xl">
           <div className="mb-6">
             <p className="text-sm font-semibold uppercase tracking-[0.28em] text-primary">
@@ -99,7 +99,7 @@ export function AuthGate({ children }: { children: React.ReactNode }) {
 
         <a
           href="mailto:sef@fastcast.ai"
-          className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+          className="text-sm font-bold text-muted-foreground transition-colors hover:text-foreground"
         >
           Work with Fastcast →
         </a>
